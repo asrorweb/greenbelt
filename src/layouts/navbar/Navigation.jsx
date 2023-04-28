@@ -88,16 +88,19 @@ const Navigation = ({ menu, setMenu }) => {
     return (
         <>
             {menu && (
-                <div className="lg:hidden absolute max-lg:h-[calc(100vh_-_72px)] bg-[#00000035] left-0 top-[72px] right-0 bottom-0"></div>
+                <div
+                    onClick={() => setMenu(false)}
+                    className="lg:hidden absolute max-lg:h-[calc(100vh_-_72px)] bg-[#00000035] left-0 top-[72px] right-0 bottom-0"
+                ></div>
             )}
             <ul
                 className={`flex items-center max-lg:translate-x-[-100%] ${
                     menu
                         ? "max-lg:translate-x-[0] duration-300 transition-transform"
                         : "max-lg:translate-x-[-100%] duration-300 transition-transform"
-                } max-lg:absolute max-lg:left-0 max-lg:flex-col
+                } max-lg:absolute max-lg:overflow-y-auto max-lg:left-0 max-lg:flex-col
             max-lg:top-[72px] max-lg:h-[calc(100vh_-_72px)] max-lg:w-[70%]  max-lg:z-[900] max-lg:items-start 
-          max-lg:bg-sky-700 max-lg:pt-3 dark:text-white`}
+          max-lg:bg-slate-100 max-lg:dark:bg-gradient-to-r max-lg:dark:from-[#26325b]  max-lg:dark:to-[#222452] max-lg:pt-3 dark:text-white`}
             >
                 {links.map((link) => {
                     return (
@@ -116,7 +119,7 @@ const Navigation = ({ menu, setMenu }) => {
                                         }
                                     }}
                                     to={!link.isSubmenu && link.url}
-                                    className="text-[16px] max-lg:py-5 max-lg:px-3 max-lg:w-full max-lg:inline-block hover:text-green-600 leading-[24px]"
+                                    className="text-[16px] max-lg:text-[18px] max-lg:py-5 max-lg:px-3 max-lg:w-full max-lg:inline-block hover:text-green-600 leading-[24px]"
                                 >
                                     {link.name}
                                 </NavLink>
@@ -168,7 +171,10 @@ const Navigation = ({ menu, setMenu }) => {
                                     {link.submenu.map((sublink) => {
                                         return (
                                             <li key={uuidv4()}>
-                                                <Link to={sublink.url}>
+                                                <Link
+                                                    to={sublink.url}
+                                                    className="py-2 w-full inline-block"
+                                                >
                                                     {sublink.name}
                                                 </Link>
                                             </li>
