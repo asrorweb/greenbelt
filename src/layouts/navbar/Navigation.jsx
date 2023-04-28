@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 
 // icons from React icons
@@ -11,6 +11,8 @@ import submenuimg from "../../assets/images/submenuimg.svg";
 // unique key from uuid
 import { v4 as uuidv4 } from "uuid";
 const Navigation = ({ menu, setMenu }) => {
+    const [subMenu, setSubMenu] = useState("");
+
     const links = [
         { name: "Bosh sahifa", isSubmenu: false, url: "/" },
         {
@@ -106,28 +108,36 @@ const Navigation = ({ menu, setMenu }) => {
                     return (
                         <li
                             key={uuidv4()}
-                            className={`lg:py-6 relative lg:px-3 max-lg:border-b-[1px] max-lg:w-full  group/item ${
+                            className={`lg:py-6 relative lg:px-3 max-lg:border-b-[1px] max-lg:border-slate-600 max-lg:w-full  group/item ${
                                 !link.isSubmenu &&
                                 "before:content-[''] before:absolute before:w-0 before:duration-300 before:h-[3px] before:bg-green-600 before:left-0 before:bottom-0 lg:hover:before:w-full"
                             }`}
                         >
-                            <div className="flex items-center justify-between">
-                                <NavLink
-                                    onClick={() => {
-                                        if (menu && !link.isSubmenu) {
-                                            setMenu(false);
-                                        }
-                                    }}
-                                    to={!link.isSubmenu && link.url}
-                                    className="text-[16px] max-lg:text-[18px] max-lg:py-5 max-lg:px-3 max-lg:w-full max-lg:inline-block hover:text-green-600 leading-[24px]"
-                                >
+                            <NavLink
+                                onClick={() => {
+                                    if (menu && !link.isSubmenu) {
+                                        setMenu(false);
+                                    }
+                                    subMenu === link.name
+                                        ? setSubMenu("")
+                                        : setSubMenu(link.name);
+                                }}
+                                to={!link.isSubmenu && link.url}
+                                className="max-lg:py-5 max-lg:flex max-lg:items-center max-lg:justify-between max-lg:px-3 max-lg:w-full hover:text-green-600 leading-[24px]"
+                            >
+                                <span className="text-[16px] block max-lg:text-[18px]">
                                     {link.name}
-                                </NavLink>
-
+                                </span>
                                 {link.isSubmenu && (
-                                    <BsChevronRight className="text-[25px] mr-3 lg:hidden" />
+                                    <BsChevronRight
+                                        className={`rotate-0 ${
+                                            subMenu === link.name
+                                                ? "rotate-[90deg] duration-300 transition-all"
+                                                : "rotate-0 duration-300 transition-all"
+                                        } text-[25px] mr-3 lg:hidden duration-300`}
+                                    />
                                 )}
-                            </div>
+                            </NavLink>
 
                             {/* desktop */}
                             {link.isSubmenu && (
@@ -166,12 +176,19 @@ const Navigation = ({ menu, setMenu }) => {
 
                             {link.isSubmenu && (
                                 <ul
-                                    className={`flex flex-col lg:hidden gap-3 pl-6 pb-5`}
+                                    className={`flex ${
+                                        subMenu === link.name
+                                            ? "block"
+                                            : "hidden"
+                                    } flex-col lg:hidden gap-3 pl-6 pb-5`}
                                 >
                                     {link.submenu.map((sublink) => {
                                         return (
                                             <li key={uuidv4()}>
                                                 <Link
+                                                    onClick={() =>
+                                                        setMenu(false)
+                                                    }
                                                     to={sublink.url}
                                                     className="py-2 w-full inline-block"
                                                 >
