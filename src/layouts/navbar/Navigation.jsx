@@ -108,7 +108,7 @@ const Navigation = ({ menu, setMenu }) => {
                     return (
                         <li
                             key={uuidv4()}
-                            className={`lg:py-6 relative lg:px-3 max-lg:border-b-[1px] max-lg:border-slate-600 max-lg:w-full  group/item ${
+                            className={`lg:py-6 relative lg:px-3 max-lg:border-b-[1px] max-lg:dark:border-slate-600 max-lg:w-full  group/item ${
                                 !link.isSubmenu &&
                                 "before:content-[''] before:absolute before:w-0 before:duration-300 before:h-[3px] before:bg-green-600 before:left-0 before:bottom-0 lg:hover:before:w-full"
                             }`}
