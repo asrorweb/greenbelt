@@ -162,7 +162,9 @@ const Navigation = ({ menu, setMenu }) => {
                             )}
 
                             {link.isSubmenu && (
-                                <ul className={`flex flex-col gap-3 pl-6 pb-5`}>
+                                <ul
+                                    className={`flex flex-col lg:hidden1 gap-3 pl-6 pb-5`}
+                                >
                                     {link.submenu.map((sublink) => {
                                         return (
                                             <li key={uuidv4()}>
