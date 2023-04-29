@@ -11,8 +11,8 @@ const Hero = () => {
             <div
                 className={`max-w-7xl flex z-20 items-center justify-between max-lg:justify-center h-full mx-auto px-10 max-md:px-4 relative`}
             >
-                <div className="mr-5 relative max-lg:mr-0  max-lg:z-20 max-lg:text-center">
-                    <h1 className="text-[70px] max-lg:text-[60px] max-lg:leading-[65px] mb-5 leading-[90px] lg:dark:text-white font-bold max-lg:dark:text-white max-lg:text-white">
+                <div className="mr-5 max-md:translate-y-[-30px] relative max-lg:mr-0  max-lg:z-20 max-lg:text-center">
+                    <h1 className="text-[70px] max-lg:text-[60px] max-sm:text-[50px] max-lg:leading-[65px] mb-5 leading-[90px] lg:dark:text-white font-bold max-lg:dark:text-white max-lg:text-white">
                         Biz bilan <br />
                         <span className="text-green-600">su'gorish</span> oson!
                     </h1>
@@ -22,10 +22,13 @@ const Hero = () => {
                         unumdorligini oshirish!
                     </p>
                     <div className="flex items-center w-full max-lg:justify-center max-md:flex-col gap-3 mx-auto">
-                        <Link className="inline-block whitespace-nowrap px-4 py-2 rounded-lg max-md:w-full shadow-2xl bg-green-600 hover:bg-green-700 text-white hover:outline-2">
+                        <a
+                            href="tel:+9980000000"
+                            className="inline-block max-md:py-4 whitespace-nowrap px-4 py-2 rounded-lg max-md:w-full shadow-2xl bg-green-600 hover:bg-green-700 text-white hover:outline-2"
+                        >
                             Biz bilan bog'lanish
-                        </Link>
-                        <Link className="inline-block whitespace-nowrap px-4 py-2 max-md:w-full shadow-2xl border border-[#d0cece] rounded-lg  hover:bg-[#eee] dark:hover:bg-[#ffffffcd] max-lg:bg-white dark:bg-white hover:outline-2">
+                        </a>
+                        <Link className="inline-block max-md:py-4 whitespace-nowrap px-4 py-2 max-md:w-full shadow-2xl border border-[#d0cece] rounded-lg  hover:bg-[#eee] dark:hover:bg-[#ffffffcd] max-lg:bg-white dark:bg-white hover:outline-2">
                             Ko'proq Malumot
                         </Link>
                     </div>
