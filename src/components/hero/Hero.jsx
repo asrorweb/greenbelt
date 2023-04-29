@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import "./hero.css";
-
 import heroImg from "../../assets/images/hero.webp";
 import hero1 from "../../assets/images/hero1.jpg";
 import hero2 from "../../assets/images/hero2.jpg";
@@ -34,20 +32,20 @@ const Hero = () => {
                 </div>
 
                 {/* img box */}
-                <div className="relative max-lg:absolute max-lg:w-full max-lg:h-full rounded-2xl max-lg:rounded-none shadow-[-3px_4px_67px_23px_rgba(34,60,80,0.2)]">
+                <div className="relative group/img max-lg:absolute max-lg:w-full max-lg:h-full rounded-2xl max-lg:rounded-none shadow-[-3px_4px_67px_23px_rgba(34,60,80,0.2)]">
                     {/* extra img */}
                     {/* 1 */}
                     <img
                         src={hero1}
                         alt=""
-                        className="z-20  absolute max-lg:hidden shadow-2xl top-[-50px] left-[-50px] object-cover rounded-2xl w-[120px] h-[120px]"
+                        className="z-20 duration-300  group-hover/img:top-[-40px] group-hover/img:left-[-40px] absolute max-lg:hidden shadow-2xl top-[-50px] left-[-50px] object-cover rounded-2xl w-[120px] h-[120px]"
                     />
 
                     {/* 2 */}
                     <img
                         src={hero2}
                         alt=""
-                        className="z-20  absolute max-lg:hidden shadow-2xl  bottom-[-50px] right-[-50px] max-[1000px]:right-[-30px] object-cover rounded-2xl w-[120px] h-[120px]"
+                        className="z-20  absolute duration-300 group-hover/img:bottom-[-24px] group-hover/img:right-[-40px] max-lg:hidden shadow-2xl  bottom-[-50px] right-[-50px] max-[1000px]:right-[-30px] object-cover rounded-2xl w-[120px] h-[120px]"
                     />
 
                     <img

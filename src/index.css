@@ -7,6 +7,11 @@
     font-family: "Poppins", sans-serif;
 }
 
+::selection {
+    color: white;
+    background-color: rgb(8, 195, 8);
+}
+
 /* .active {
     color: #16a34a;
 } */
