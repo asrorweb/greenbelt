@@ -21,7 +21,6 @@ const DarkLightMode = () => {
         localStorage.setItem("mode", JSON.stringify(newMode));
         document.documentElement.className = newMode;
     };
-    console.log(mode);
 
     return (
         <div onClick={() => modeHendler()}>

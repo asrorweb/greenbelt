@@ -17,7 +17,7 @@ function App() {
                             element={<ContactMe />}
                         />
                     </Routes>
-                    <Footer />
+                    {/* <Footer /> */}
                 </BrowserRouter>
             </div>
         </div>
