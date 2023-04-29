@@ -6,7 +6,7 @@ import ContactMe from "./pages/contactMe/ContactMe";
 
 function App() {
     return (
-        <div className="App min-h-screen overflow-x-hidden">
+        <div className="App min-h-screen overflow-x-hidden bg-white dark:bg-[#171836]">
             <div>
                 <BrowserRouter>
                     <Header />
