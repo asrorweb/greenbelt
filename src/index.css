@@ -12,6 +12,20 @@
     background-color: rgb(8, 195, 8);
 }
 
-/* .active {
-    color: #16a34a;
-} */
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background: #797979;
+    transition: all 0.5s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #06bd03a9;
+}
+
+::-webkit-scrollbar-track {
+    background: #f9f9f9;
+}
