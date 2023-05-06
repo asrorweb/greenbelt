@@ -83,7 +83,7 @@ const Navigation = ({ menu, setMenu }) => {
                                                     to={sublink.url}
                                                     className="pl-7 pr-2 py-3 flex items-center hover:text-green-600  gap-1 w-full text-[15px] leading-[20px] font-medium"
                                                 >
-                                                    <div className="w-[35px] bg-[#f8f8f8] dark:bg-[#212b4ed1] rounded-md h-[35px] flex items-center justify-center gap-2">
+                                                    <div className="w-[35px] bg-[#f8f8f8] dark:bg-[#212b4ed1] rounded-md h-[35px] flex items-center justify-center">
                                                         <img
                                                             src={submenuimg}
                                                             alt=""

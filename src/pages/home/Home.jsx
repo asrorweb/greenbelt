@@ -1,12 +1,14 @@
 import React from "react";
 import Hero from "../../components/hero/Hero";
-import Product from "./Product";
+import Gallarry from "../../components/gallary/Gallarry";
+import ProductSlider from "../../components/productSliders/ProductSlider";
 
 const Home = () => {
     return (
         <div>
             <Hero />
-            <Product />
+            <ProductSlider />
+            <Gallarry />
         </div>
     );
 };

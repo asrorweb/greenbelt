@@ -8,10 +8,10 @@ import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // css
-import "./Product.css";
+import "./ProductSlider.css";
 
 // icons from react icon
-import { GrFormPrevious, GrNext } from "react-icons/gr";
+import { GrFormPrevious } from "react-icons/gr";
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -20,7 +20,7 @@ import "swiper/css/navigation";
 
 import { EffectCoverflow, Pagination, Navigation } from "swiper";
 
-const Product = () => {
+const ProductSlider = () => {
     return (
         <div className="pt-6">
             <div>
@@ -140,7 +140,6 @@ const Product = () => {
                                 });
                             }
                         })}
-
                         <div className="slider-controler">
                             <div className="swiper-button-prev shadow-2xl  slider-arrow text-[30px]">
                                 <GrFormPrevious
@@ -148,7 +147,6 @@ const Product = () => {
                                     name="arrow-back-outline"
                                 ></GrFormPrevious>
                             </div>
-                            {/* <div className="swiper-pagination"></div> */}
                             <div className="swiper-button-next shadow-2xl  slider-arrow text-[30px]">
                                 <GrFormPrevious
                                     className="text-[30px] rotate-[180deg]"
@@ -163,4 +161,4 @@ const Product = () => {
     );
 };
 
-export default Product;
+export default ProductSlider;

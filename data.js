@@ -25,45 +25,46 @@ export const links = [
         submenu: [
             {
                 name: "Loyihalashtirish",
-                url: "/xizmatlar/tomchilatib",
+                url: "/services",
             },
-            { name: "Uskunalarni o'rnatish", url: "/xizmatlar/uskunalar" },
+            { name: "Uskunalarni o'rnatish", url: "/services" },
             {
                 name: "Bir mavsum davomida servis xizmat ko'rsatish",
-                url: "/xizmatlar/servis",
+                url: "/services",
             },
             {
                 name: "Sug'orishni nazorat qilish",
-                url: "/xizmatlar/nazorat",
+                url: "/services",
             },
             {
                 name: "Subsidiya olishda yordam",
-                url: "/xizmatlar/subsidiya",
+                url: "/services",
             },
         ],
     },
     {
         name: "Maxsulotlar",
-        isSubmenu: true,
+        isSubmenu: false,
         submenu: [
             {
                 name: "Polietilen truba",
-                url: "/maxsulotlar/polietilen",
+                url: "/maxsulotlar",
             },
-            { name: "Kapilniy lenta", url: "/maxsulotlar/kapelniy" },
+            { name: "Kapilniy lenta", url: "/maxsulotlar" },
             {
                 name: "Membrana",
-                url: "/maxsulotlar/membrana",
+                url: "/maxsulotlar",
             },
             {
                 name: "Filtr",
-                url: "/maxsulotlar/filtr",
+                url: "/maxsulotlar",
             },
             {
                 name: "Yumshoq quvur",
-                url: "/maxsulotlar/yomshoqquvur",
+                url: "/maxsulotlar",
             },
         ],
+        url: "/maxsulotlar",
     },
     {
         name: "Aloqa",

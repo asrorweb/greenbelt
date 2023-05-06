@@ -7,7 +7,7 @@ import hero2 from "../../assets/images/hero2.jpg";
 
 const Hero = () => {
     return (
-        <div className="h-[calc(100vh_-_72px)]  max-lg:bg-[#171836]  relative mt-[72px] ">
+        <div className="h-[calc(100vh_-_72px)]  max-lg:bg-[#171836]  relative">
             <div
                 className={`max-w-7xl flex z-20 items-center justify-between max-lg:justify-center h-full mx-auto px-10 max-md:px-4 relative`}
             >

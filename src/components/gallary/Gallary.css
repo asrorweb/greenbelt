@@ -1,0 +1,21 @@
+.slide-track {
+    width: calc(250px * 18);
+    animation: autoscroll 100s linear infinite alternate-reverse;
+}
+
+.slide-2 {
+    animation-delay: -100s;
+}
+
+.slide-3 {
+    animation: autoscroll 80s linear infinite alternate-reverse;
+}
+
+@keyframes autoscroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-200px * 9));
+    }
+}
