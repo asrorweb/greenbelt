@@ -5,16 +5,13 @@
 }
 
 .container {
-    max-width: 70% !important;
-    padding: 1rem 1rem;
-    margin: 0 auto;
+    max-width: 100% !important;
+    /* padding: 1rem 1rem; */
 }
 
 .swiper_container {
     height: 33rem;
-    padding: 2rem 0;
-    position: relative;
-    overflow: visible;
+    /* padding: 2rem 0; */
 }
 
 .swiper-slide {
@@ -66,8 +63,15 @@
     }
 }
 
+@media (max-width: 640px) {
+    .slider-controler {
+        display: none !important;
+    }
+}
+
 @media (max-width: 450px) {
     .slider-controler .swiper-button-next {
+        top: 20px;
         left: 80% !important;
         transform: translateX(-80%) !important;
     }
@@ -82,6 +86,7 @@
 
 @media (max-width: 450px) {
     .slider-controler .swiper-button-prev {
+        top: 20px;
         left: 20% !important;
         transform: translateX(-20%) !important;
     }

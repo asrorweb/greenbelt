@@ -3,7 +3,7 @@ import React from "react";
 const FormSubmit = () => {
     return (
         <div className="max-w-[1400px] mx-auto px-10 max-md:px-4 mb-20">
-            <form action="mailto:asrorakmalovich2021@gmail.com">
+            <form action="mailto:greenbeltfergana@gmail.com">
                 <div>
                     <div className="relative z-0 w-full mb-6 group">
                         <input

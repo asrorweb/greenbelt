@@ -1,5 +1,3 @@
-// import { MdLanguage } from "react-icons/md";
-
 import { useEffect, useState } from "react";
 import { useContext } from "react";
 
@@ -7,10 +5,15 @@ import { Context } from "../../context/ThemeContextProvider";
 
 import { v4 as uuidv4 } from "uuid";
 
+// flags
+import UZB from "../../assets/images/uzb.png";
+import ENG from "../../assets/images/eng.png";
+import TURK from "../../assets/images/turk.png";
+import RUS from "../../assets/images/rus.png";
 const Language = () => {
     const [{ country, flag }, setChangeLanguage] = useState({
         country: "UZB",
-        flag: "https://www.samdu.uz/upload/cover-images/61312fa1aa6d7-61312fa1aa6d8-61312fa1aa6d9-61312fa1aa6da.jpg",
+        flag: UZB,
     });
 
     // language dropdown open or close // ochish yoki yopish uchun
@@ -19,26 +22,44 @@ const Language = () => {
     // Context
     const { dispatch } = useContext(Context);
 
+    useEffect(() => {
+        const localDAta = localStorage.getItem("language")
+            ? JSON.parse(localStorage.getItem("language"))
+            : "";
+        dispatch({
+            type: "CHANGE_LANGUAGE",
+            payload: localDAta,
+        });
+
+        const localStorageLanguage = optionsLanguage.filter((item) => {
+            return item.value == localDAta;
+        });
+        setChangeLanguage({
+            country: localStorageLanguage[0].label,
+            flag: localStorageLanguage[0].img,
+        });
+    }, []);
+
     const optionsLanguage = [
         {
-            value: "UZB",
+            value: "",
             label: "UZB",
-            img: "https://www.samdu.uz/upload/cover-images/61312fa1aa6d7-61312fa1aa6d8-61312fa1aa6d9-61312fa1aa6da.jpg",
+            img: UZB,
         },
         {
-            value: "ENG",
+            value: "eng",
             label: "ENG",
-            img: "https://cdn.britannica.com/79/4479-050-6EF87027/flag-Stars-and-Stripes-May-1-1795.jpg",
+            img: ENG,
         },
         {
-            value: "RUS",
+            value: "ru",
             label: "RUS",
-            img: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/800px-Flag_of_Russia.svg.png",
+            img: RUS,
         },
         {
-            value: "TUR",
+            value: "turk",
             label: "TUR",
-            img: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Turkey.svg/800px-Flag_of_Turkey.svg.png",
+            img: TURK,
         },
     ];
 
@@ -68,14 +89,19 @@ const Language = () => {
                         onClick={() => {
                             const country = lang.value;
                             setChangeLanguage({
-                                country: country,
+                                country: lang.label,
                                 flag: lang.img,
                             });
                             setDropLanguage(false);
                             dispatch({
                                 type: "CHANGE_LANGUAGE",
-                                payload: { country },
+                                payload: country,
                             });
+
+                            localStorage.setItem(
+                                "language",
+                                JSON.stringify(country)
+                            );
                         }}
                         className="cursor-pointer flex items-center justify-between hover:bg-slate-100 dark:hover:bg-[#161733] px-2 py-1 max-sm:px-3 max-sm:text-sm"
                     >

@@ -1,8 +1,10 @@
 import { createContext, useReducer } from "react";
 
 const initialValue = {
-    data: [],
-    language: "UZB",
+    dataMenu: [],
+    language: "",
+    dataProduct: [],
+    loading: false,
 };
 
 export const Context = createContext();
@@ -12,6 +14,12 @@ const reducer = (state = initialValue, action) => {
     switch (type) {
         case "CHANGE_LANGUAGE":
             return { ...state, language: payload };
+        case "ADD_MENU_DATA":
+            return { ...state, dataMenu: payload };
+        case "ADD_PRODUCT_DATA":
+            return { ...state, dataProduct: payload };
+        case "CHANGE_LOADING":
+            return { ...state, loading: payload };
         default:
             return { state };
     }

@@ -1,19 +1,19 @@
 import React from "react";
-import { BsFacebook, BsInstagram, BsTelegram } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { BsInstagram, BsTelegram } from "react-icons/bs";
+import { AiFillYoutube } from "react-icons/ai";
 
 const SocialNetvork = () => {
     return (
         <div className="flex gap-3">
-            <Link>
-                <BsFacebook className="text-[24px] dark:text-white hover:text-[#4267B2] dark:hover:text-[#4267B2]" />
-            </Link>
-            <Link>
+            <a href="https://youtube.com/@GreenBeltFergana">
+                <AiFillYoutube className="text-[28px] dark:text-white hover:text-red-700 dark:hover:text-red-700" />
+            </a>
+            <a href="https://instagram.com/greenbelt_fergana?igshid=ZWQyN2ExYTkwZQ==">
                 <BsInstagram className="text-[24px] dark:text-white hover:text-[#E1306C] dark:hover:text-[#E1306C]" />
-            </Link>
-            <Link>
+            </a>
+            <a href="https://t.me/greenbelt_fergana">
                 <BsTelegram className="text-[24px]  dark:text-white hover:text-[#0088cc] dark:hover:text-[#0088cc]" />
-            </Link>
+            </a>
         </div>
     );
 };
