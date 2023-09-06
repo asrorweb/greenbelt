@@ -22,9 +22,13 @@ const Header = () => {
                         <FiMenu />
                     </button>
                     <Link to={"/"} className="flex items-center gap-2 ">
-                        <img src={Logo} alt="site logo" className="w-14 h-14" />
+                        <img
+                            src={Logo}
+                            alt="site logo"
+                            className="w-[190px] max-[500px]:w-[150px]"
+                        />
                         <span className="uppercase text-xl max-[337px]:text-[12px] max-[337px]:leading-[15px]  max-sm:text-[16px] font-medium text-green-600">
-                            Green Belt Fergana
+                            {/* Green Belt Fergana */}
                             {/* GBF */}
                         </span>
                     </Link>

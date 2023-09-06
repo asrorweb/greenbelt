@@ -14,11 +14,15 @@ const Footer = () => {
                     {/* logo and social networks */}
                     <div className="flex flex-col">
                         <Link to={"/"} className="mb-1 inline-block">
-                            <img src={Logo} alt="logo" className="w-14 h-14" />
+                            <img
+                                src={Logo}
+                                alt="logo"
+                                className="w-[200px] max-[500px]:w-[150px]"
+                            />
                         </Link>
 
                         <span className="mb-2 text-base dark:text-green-600">
-                            Green Belt Fergana
+                            {/* Green Belt Fergana */}
                         </span>
 
                         {/* social networks */}

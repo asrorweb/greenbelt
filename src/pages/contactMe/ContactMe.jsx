@@ -98,9 +98,6 @@ const ContactMe = () => {
             <div className="max-w-7xl mx-auto px-10 max-md:px-4 dark:text-white">
                 <h1 className="text-center text-3xl font-bold mb-4">
                     <span className="text-green-600">Green Belt Fergana </span>
-                    {/* <span className="font-normal text-2xl">
-                        ga xush kelibsiz
-                    </span> */}
                 </h1>
                 <p className="text-[19px] leading-[150%] mb-10 dark:text-slate-400">
                     {subTitle}
